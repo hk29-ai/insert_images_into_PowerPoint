@@ -94,7 +94,7 @@ while slide_count < pages:
     # 左詰め
     title_shape.text_frame.paragraphs[0].alignment = PP_ALIGN.LEFT
 
-    # タイトルのフォントサイズを32ポイントに設定
+    # タイトルのフォントサイズを設定
     title_shape.text_frame.paragraphs[0].font.size = Pt(32)
     # タイトルをスライドの上端に配置
     title_shape.top = Inches(0.1)
@@ -113,13 +113,13 @@ while slide_count < pages:
     frame = textbox.text_frame
     frame.text = "サブタイトル"
     frame.paragraphs[0].alignment = PP_ALIGN.CENTER  # 中央配置
-    frame.paragraphs[0].runs[0].font.size = Pt(28)  # フォントサイズを24に設定
+    frame.paragraphs[0].runs[0].font.size = Pt(28)  # フォントサイズを設定
     
     # タイトルの下に棒線を描く
     left = title_shape.left
     top = title_shape.top + title_shape.height
     width = title_shape.width
-    height = Pt(1)  # 線の太さを1ptに設定
+    height = Pt(1)  # 線の太さを設定
 
     line = slide.shapes.add_shape(
         MSO_SHAPE.RECTANGLE, left, top, width, height
